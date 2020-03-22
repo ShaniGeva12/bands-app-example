@@ -125,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bands"
+    }
+  },
+  "defaultProject": "bands",
+  "cli": {
+    "analytics": false
+  }
 }
