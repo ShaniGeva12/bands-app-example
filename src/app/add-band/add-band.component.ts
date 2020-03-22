@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Band} from "../band.model";
-import {ActivatedRoute, Params} from "@angular/router";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {BandsService} from "../bands.service";
 
 @Component({
   selector: 'app-add-band',
@@ -8,17 +8,21 @@ import {ActivatedRoute, Params} from "@angular/router";
   styleUrls: ['./add-band.component.scss']
 })
 export class AddBandComponent implements OnInit {
+  addBandForm = new FormGroup({
+    name : new FormControl('', Validators.required),
+    origin : new FormControl('', Validators.required),
+    yearsActive : new FormControl('', Validators.required),
+    website : new FormControl('', Validators.required)
+  });
 
-  bands: Band[] = [];
-  paramsSubscription = null;
-  constructor(private route: ActivatedRoute) { }
+
+  constructor(private bandsService : BandsService) { }
 
   ngOnInit() {
-    this.paramsSubscription = this.route.params
-      .subscribe();
   }
 
-  onAdd(band: Band) {
-    this.bands.push(band);
+  onAdd() {
+    this.bandsService.addBand(this.addBandForm.value);
   }
+
 }
