@@ -18,7 +18,7 @@ export class AddBandComponent implements OnInit {
       .subscribe();
   }
 
-  onAddItem(band: Band) {
+  onAdd(band: Band) {
     this.bands.push(band);
   }
 }

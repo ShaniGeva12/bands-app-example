@@ -1,49 +1,22 @@
-<div class="row">
-  <div class="col-xs-12">
-    <form (ngSubmit)="onAddItem($event)" #f="ngForm">
-      <div class="row">
-        <div class="col-sm-5 form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            class="form-control"
-            name="name"
-            ngModel
-            required>
-        </div>
-        <div class="col-sm-2 form-group">
-          <label for="origin">Origin</label>
-          <input
-            type="text"
-            id="origin"
-            class="form-control"
-            name="origin"
-            ngModel
-            required>
-        </div>
-        <div class="col-sm-2 form-group">
-          <label for="years-active">Years active</label>
-          <input
-            type="number"
-            id="years-active"
-            class="form-control"
-            name="years-active"
-            ngModel
-            required
-            pattern="^[1-9]+[0-9]*$">
-        </div>
-        <div class="col-sm-2 form-group">
-          <label for="website">Website</label>
-          <input
-            type="text"
-            id="website"
-            class="form-control"
-            name="website"
-            ngModel
-            required>
-        </div>
-      </div>
-    </form>
-  </div>
+<div class="ni-center">
+  <div class="ni-title">Create a new Band</div>
+  <form [formGroup]="addBandForm" class="ni-form" (ngSubmit)="onAdd()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" placeholder="name" required>
+    </div>
+    <div>
+      <label for="origin">Origin:</label>
+      <input id="origin" formControlName="origin" placeholder="Origin" required>
+    </div>
+    <div>
+      <label for="yearsActive">Years active:</label>
+      <input id="yearsActive" formControlName="yearsActive" placeholder="years active" required>
+    </div>
+    <div>
+      <label for="website">Website:</label>
+      <input id="website" formControlName="website" placeholder="Website" required>
+    </div>
+    <button id="submit_button" type="submit" [disabled]="addBandForm.invalid" >Submit</button>
+  </form>
 </div>
