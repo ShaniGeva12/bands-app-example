@@ -20,9 +20,5 @@ export class BandDataComponent implements OnInit {
         this.id = +params.id
     );
     this.band = this.bandService.getBand(this.id);
-    console.log(this.band);
-
-
-
   }
 }
