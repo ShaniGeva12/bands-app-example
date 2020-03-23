@@ -1,4 +1,4 @@
-<table style="width:100%">
+<table  id="t01">
   <tr>
     <th>Name</th>
     <th>Origin</th>
@@ -6,11 +6,12 @@
     <th>Website</th>
     <th>Disbanding year</th>
   </tr>
-  <tr *ngFor="let band of bands" *ngIf="bands.size > 0">
+  <tr *ngFor="let band of bands; let i = index">
     <td>{{ band.name }}</td>
     <td>{{ band.origin }}</td>
     <td>{{ band.yearsActive }}</td>
     <td>{{ band.website }}</td>
     <td>{{ band.disbandingYear }}</td>
+    <button class="btn btn-primary" (click)="onDelete(i)">Delete</button>
   </tr>
 </table>
