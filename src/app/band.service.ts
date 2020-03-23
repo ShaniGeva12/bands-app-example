@@ -27,9 +27,7 @@ export class BandService {
   };
 
   addBand(band: Band) {
-    console.log(band);
     this.bands.push(band);
     localStorage.setItem('bands', JSON.stringify(this.bands));
   }
-
 }

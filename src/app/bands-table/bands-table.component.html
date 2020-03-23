@@ -6,7 +6,7 @@
     <th>Website</th>
     <th>Disbanding year</th>
   </tr>
-  <tr *ngFor="let band of getBands()">
+  <tr *ngFor="let band of bands" *ngIf="bands.size > 0">
     <td>{{ band.name }}</td>
     <td>{{ band.origin }}</td>
     <td>{{ band.yearsActive }}</td>

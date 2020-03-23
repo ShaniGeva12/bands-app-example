@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Subscription} from "rxjs";
+import {Band} from "../band.model";
 import {BandService} from "../band.service";
 
 @Component({
@@ -6,15 +8,21 @@ import {BandService} from "../band.service";
   templateUrl: './bands-table.component.html',
   styleUrls: ['./bands-table.component.scss']
 })
-export class BandsTableComponent implements OnInit {
-
-  constructor(private bandService: BandService) { }
+export class BandsTableComponent implements OnInit, OnDestroy{
+  bands: Band[];
+  displayedColumns: string[] = ['name', 'origin', 'yearsActive', 'website'];
+  bandSubscription: Subscription;
+  constructor(private bandsService: BandService) { }
 
   ngOnInit() {
+    this.bands = this.bandsService.getBands();
+    this.bandSubscription = this.bandsService.bandChanged.subscribe( bands => {
+      this.bands = bands;
+    })
   }
 
-  getBands() {
-    return this.bandService.getBands();
+  ngOnDestroy() {
+    this.bandSubscription.unsubscribe();
   }
 
 }
