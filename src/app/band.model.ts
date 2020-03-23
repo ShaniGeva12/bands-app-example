@@ -3,4 +3,5 @@ export class Band {
   origin: string;
   yearsActive: string;
   website: string;
+  disbandingYear?: number;
 }

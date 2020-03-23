@@ -1,22 +1,29 @@
-<div class="ni-center">
-  <div class="ni-title">Create a new Band</div>
-  <form [formGroup]="addBandForm" class="ni-form" (ngSubmit)="onAdd()">
-    <div>
+<h3 >Create a new Band</h3>
+<form [formGroup]="addBandForm" class="ni-form" (ngSubmit)="onAdd()">
+    <p>
       <label for="name">Name:</label>
-      <input id="name" formControlName="name" placeholder="name" required>
-    </div>
-    <div>
+      <input type="text" id="name" formControlName="name" placeholder="name" required>
+    </p>
+  <p>
       <label for="origin">Origin:</label>
       <input id="origin" formControlName="origin" placeholder="Origin" required>
-    </div>
-    <div>
+  </p>
+  <p>
       <label for="yearsActive">Years active:</label>
-      <input id="yearsActive" formControlName="yearsActive" placeholder="years active" required>
-    </div>
-    <div>
+      <input type="number" id="yearsActive" formControlName="yearsActive" placeholder="years active" required pattern="^[1-9]+[0-9]*$">
+  </p>
+  <p>
       <label for="website">Website:</label>
       <input id="website" formControlName="website" placeholder="Website" required>
-    </div>
-    <button id="submit_button" type="submit" [disabled]="addBandForm.invalid" >Submit</button>
-  </form>
-</div>
+  </p>
+  <p>
+    <label>Disbanding year:</label>
+    <input #checkEl type="checkbox" id="checkEl" (change)="0">
+  </p>
+  <p>
+    <input *ngIf="checkEl.checked" id="disbandingYear" formControlName="disbandingYear" placeholder="disbanding year" pattern="^[1-9]+[0-9]*$" [required]="checkEl.checked">
+  </p>
+
+  <button id="submit_button" type="submit"
+          [disabled]="addBandForm.invalid" >Submit</button>
+</form>

@@ -5,7 +5,7 @@ import {Band} from "./band.model";
 @Injectable({
   providedIn: 'root'
 })
-export class BandsService {
+export class BandService {
 
   bands : Band[];
 
@@ -23,10 +23,11 @@ export class BandsService {
   }
 
   getColumns(): string[] {
-    return ["name", "origin", "yearsActive", "website"]
+    return ["name", "origin", "yearsActive", "website", "disbandingYear"]
   };
 
   addBand(band: Band) {
+    console.log(band);
     this.bands.push(band);
     localStorage.setItem('bands', JSON.stringify(this.bands));
   }
