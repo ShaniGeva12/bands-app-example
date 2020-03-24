@@ -3,24 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
 import { AddBandComponent } from './add-band/add-band.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {BandsService} from "./bands.service";
-import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddBandComponent,
-    HomeComponent
+    HeaderComponent,
+    AddBandComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
+    AppRoutingModule
   ],
-  providers: [BandsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
