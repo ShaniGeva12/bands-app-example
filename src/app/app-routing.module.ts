@@ -9,7 +9,7 @@ import {BandDataComponent} from "./band-data/band-data.component";
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'add-band', component: AddBandComponent},
-  {path: 'show-bands', component: BandsTableComponent},
+  {path: 'bands', component: BandsTableComponent},
   {path: ':id', component: BandDataComponent}
 ];
 
