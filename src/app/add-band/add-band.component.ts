@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {BandService} from "../band.service";
+import {BandsService} from "../bands.service";
 
 @Component({
   selector: 'app-add-band',
@@ -9,19 +9,20 @@ import {BandService} from "../band.service";
 })
 export class AddBandComponent implements OnInit {
   addBandForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    origin: new FormControl('', Validators.required),
-    yearsActive: new FormControl('', Validators.required),
-    website: new FormControl('', Validators.required),
-    disbandingYear: new FormControl(null)
+    name : new FormControl('', Validators.required),
+    origin : new FormControl('', Validators.required),
+    yearsActive : new FormControl('', Validators.required),
+    website : new FormControl('', Validators.required)
   });
 
-  constructor(private bandService : BandService) { }
+
+  constructor(private bandsService : BandsService) { }
 
   ngOnInit() {
   }
 
   onAdd() {
-    this.bandService.addBand(this.addBandForm.value);
+    this.bandsService.addBand(this.addBandForm.value);
   }
+
 }

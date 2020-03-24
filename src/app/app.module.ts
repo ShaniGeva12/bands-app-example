@@ -5,16 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddBandComponent } from './add-band/add-band.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {BandService} from "./band.service";
+import {BandsService} from "./bands.service";
 import { HomeComponent } from './home/home.component';
-import {BandsTableComponent} from "./bands-table/bands-table.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     AddBandComponent,
-    HomeComponent,
-    BandsTableComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +20,7 @@ import {BandsTableComponent} from "./bands-table/bands-table.component";
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [BandService],
+  providers: [BandsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
