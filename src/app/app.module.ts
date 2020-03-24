@@ -8,15 +8,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BandService} from "./band.service";
 import { HomeComponent } from './home/home.component';
 import {BandsTableComponent} from "./bands-table/bands-table.component";
-import { BandDataComponent } from './band-data/band-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddBandComponent,
     HomeComponent,
-    BandsTableComponent,
-    BandDataComponent
+    BandsTableComponent
   ],
   imports: [
     BrowserModule,

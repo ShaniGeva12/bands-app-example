@@ -25,8 +25,4 @@ export class BandsTableComponent implements OnInit, OnDestroy{
     this.bandSubscription.unsubscribe();
   }
 
-  onDelete(index: number) {
-    this.bandsService.deleteBand(index);
-    this.bands = this.bandsService.getBands();
-  }
 }
