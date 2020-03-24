@@ -1,5 +1,5 @@
 <h3 >Create a new Band</h3>
-<form [formGroup]="addBandForm" class="ni-form" (ngSubmit)="onAdd()">
+<form [formGroup]="addBandForm" class="ni-form">
     <p>
       <label for="name">Name:</label>
       <input type="text" id="name" formControlName="name" placeholder="name" required>
@@ -25,5 +25,5 @@
   </p>
 
   <button id="submit_button" type="submit"
-          [disabled]="addBandForm.invalid" routerLink="/bands">Submit</button>
+          [disabled]="addBandForm.invalid" (click)="onAdd()" routerLink="/show-bands">Submit</button>
 </form>
