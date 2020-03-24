@@ -10,6 +10,7 @@ import {BandService} from "../band.service";
 })
 export class BandsTableComponent implements OnInit, OnDestroy{
   bands: Band[];
+  displayedColumns: string[] = ['name', 'origin', 'yearsActive', 'website'];
   bandSubscription: Subscription;
   constructor(private bandsService: BandService) { }
 
