@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c8b5e28-2627-4f14-ba3e-ea954f669122" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/db.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/auth.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/band.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/auth.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/band.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/auth.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/band.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/app/models/band.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/app/resolvers/show-bands.resolver.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/assets/delete-icon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/assets/error.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/assets/next-one-color-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/styles.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1gX7LWDvNBwihEJHppmiV3fBB53" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/controllers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start:dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c8b5e28-2627-4f14-ba3e-ea954f669122" name="Default Changelist" comment="" />
+      <created>1598249027592</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598249027592</updated>
+      <workItem from="1598249028687" duration="5233000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1771" height="303" key="GridCell.Tab.0.bottom" timestamp="1598270167839">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1771" height="303" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1598270167839" />
+    <state width="1771" height="303" key="GridCell.Tab.0.center" timestamp="1598270167838">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1771" height="303" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1598270167838" />
+    <state width="1771" height="303" key="GridCell.Tab.0.left" timestamp="1598270167837">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1771" height="303" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1598270167837" />
+    <state width="1771" height="303" key="GridCell.Tab.0.right" timestamp="1598270167838">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1771" height="303" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1598270167838" />
+    <state x="893" y="312" width="604" height="490" key="find.popup" timestamp="1598276393944">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="893" y="312" width="604" height="490" key="find.popup/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1598276393944" />
+  </component>
+</project>
