@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BandsService} from './services/bands.service';
+import {BandsService} from './band/bands.service';
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,75 @@
+@import "../../../../vars";
+$logo-height: 54px;
+header {
+  position: relative;
+  background-color: #fff;
+  padding: 16px;
+  border-bottom: 2px solid $next-light-blue;
+  display: flex;
+  justify-content: space-between;
+  height: $header_height;
+  img {
+    height: $logo-height;
+  }
+  .hamburger-button {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: 16px;
+    top: 24px;
+    background-image: url("../../../../assets/hamburger.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+  }
+  ul {
+    margin-right: 36px;
+    li {
+      cursor: pointer;
+      text-transform: uppercase;
+      padding-left: 16px;
+      display: inline-block;
+      font-size: 12px;
+      line-height: $logo-height;
+      &.user-name {
+        cursor: auto;
+        text-transform: capitalize;
+        span {
+          cursor: pointer;
+          color: $next-light-blue;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+  header {
+    .hamburger-button {
+      display: block;
+    }
+    ul {
+      transition: transform 500ms;
+      transform: translateX(110%);
+      &.display-menu {
+        transform: translateX(0%);
+      }
+      box-shadow: -9px 0px 16px -9px rgba(0,0,0,0.75);
+      z-index: 10;
+      position: fixed;
+      background-color: #ffffff;
+      right: 0;
+      top: $header_height;
+      height: calc(100% - #{$header_height});
+      width: 50%;
+      margin-right: 0px;
+      li {
+        line-height: 32px;
+        border-bottom: 1px solid #cacaca;
+        display: block;
+      }
+    }
+  }
+}

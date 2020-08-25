@@ -1,0 +1,54 @@
+<h1>Bands</h1>
+<span *ngIf="!dataSource || dataSource.data.length === 0" class="no-data">
+  <h3><img src="../../../../assets/error.svg" width="24" /> No bands found</h3>
+  <p>You can <a routerLink="/add-band">add</a> some bands</p>
+</span>
+<table *ngIf="dataSource && dataSource.data.length > 0" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- origin Column -->
+  <ng-container matColumnDef="origin">
+    <th mat-header-cell *matHeaderCellDef> Origin </th>
+    <td mat-cell *matCellDef="let element"> {{element.origin}} </td>
+  </ng-container>
+
+  <!-- years Column -->
+  <ng-container matColumnDef="years">
+    <th mat-header-cell *matHeaderCellDef> Years </th>
+    <td mat-cell *matCellDef="let element"> {{element.years}} </td>
+  </ng-container>
+
+  <!-- website Column -->
+  <ng-container matColumnDef="website">
+    <th mat-header-cell *matHeaderCellDef> Website </th>
+    <td mat-cell *matCellDef="let element">
+      <a href="element.website" target="_blank" (click)="$event.stopPropagation()">
+        <span class="website-text">{{element.website}}</span>
+        <span class="mobile-website-text">Website</span>
+      </a>
+    </td>
+  </ng-container>
+
+  <!-- disbandingYear Column -->
+  <ng-container matColumnDef="disbandingYear">
+    <th mat-header-cell *matHeaderCellDef> Disbanding </th>
+    <td mat-cell *matCellDef="let element"> {{element.disbandingYear || '--'}} </td>
+  </ng-container>
+
+  <!-- delete Column -->
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef> &nbsp; </th>
+    <td mat-cell *matCellDef="let element"> <img class="delete-button" src="../../../../assets/delete-icon.jpg" width="24" height="16" (click)="deleteBand($event, element.id)"> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="router.navigateByUrl('/band-details/' + row.id)"></tr>
+</table>

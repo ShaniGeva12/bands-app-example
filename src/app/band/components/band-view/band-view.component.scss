@@ -1,0 +1,37 @@
+@import "../../../../vars";
+.band-details {
+  margin: auto;
+  max-width: 350px;
+  text-align: center;
+  h1 {
+    padding: 32px;
+    text-align: center;
+  }
+  .details {
+    background-color: #ffffff;
+    border: 2px solid $next-light-blue;
+    border-radius: 16px;
+    padding: 32px 16px;
+    .detail {
+      margin: auto auto 16px;
+      font-size: 13px;
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px dotted $next-light-blue;
+      .detail-title {
+        font-weight: bold;
+      }
+    }
+  }
+}
+.no-band {
+  margin: auto;
+  max-width: 350px;
+  text-align: center;
+  padding: 32px;
+  img {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}

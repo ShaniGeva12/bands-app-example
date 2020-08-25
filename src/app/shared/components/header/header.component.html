@@ -1,0 +1,12 @@
+<header>
+  <img src="../../../../assets/next-one-color-logo.svg" />
+  <ng-container>
+
+  </ng-container>
+  <ul class="menu" [ngClass]="mobileMenuVisible ? 'display-menu' : ''" (clickOutside)="clickOutSide($event)">
+    <li (click)="openLink('add-band')">Add Band</li>
+    <li (click)="openLink('show-bands')">Show bands</li>
+    <li class="user-name">Hi {{name}}, ( <span (click)="logout()">Logout</span> )</li>
+  </ul>
+  <div class="hamburger-button" (click)="toggleMobileMenu()"></div>
+</header>
