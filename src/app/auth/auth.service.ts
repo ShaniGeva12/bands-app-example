@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import {Config} from '../config/config';
-import {HttpClient} from '@angular/common/http';
-import {AuthUserBE, User} from './auth.model';
-import {Observable} from 'rxjs';
-import {CookieService} from 'ngx-cookie-service';
+import { Config } from '../config/config';
+import { HttpClient} from '@angular/common/http';
+import { UserResponse } from './models/userResponse.model';
+import { Observable} from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
+import { User } from './models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,15 +13,15 @@ export class AuthService {
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 
-  public login(user: string, pass: string): Observable<AuthUserBE[]> {
+  public login(user: string, pass: string): Observable<UserResponse[]> {
     const url = `${Config.serverDev}${Config.authApi}${user}/${pass}`;
-    return this.http.get<AuthUserBE[]>(url);
+    return this.http.get<UserResponse[]>(url);
   }
 
   public logout() {
     this.cookieService.deleteAll();
   }
-  public setUser(user: AuthUserBE) {
+  public setUser(user: UserResponse) {
     this.cookieService.set('userName', user.UserName);
     this.refreshToken(user.UserToken);
   }

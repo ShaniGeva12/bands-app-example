@@ -12,13 +12,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "ni",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "ni",
       "kebab-case"
     ],
     "import-blacklist": [
@@ -60,7 +60,6 @@
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
-    "no-use-before-declare": true,
     "no-var-requires": false,
     "object-literal-key-quotes": [
       true,
@@ -82,7 +81,9 @@
     "no-output-rename": true,
     "no-outputs-metadata-property": true,
     "template-banana-in-box": true,
-    "template-no-negated-async": true,
+    "template-no-negated-async": {
+      "severity": "warning"
+    },
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true
   },

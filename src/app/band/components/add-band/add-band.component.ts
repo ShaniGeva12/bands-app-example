@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {BandsService} from '../../bands.service';
-import {Band, BandBE} from '../../band.model';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { BandsService } from '../../services/bands.service';
+import { BandResponse } from '../../models/bandResponse.model';
 
 @Component({
-  selector: 'app-add-band',
+  selector: 'ni-app-add-band',
   templateUrl: './add-band.component.html',
-  styleUrls: ['./add-band.component.scss']
+  styleUrls: ['./add-band.component.scss'],
 })
 export class AddBandComponent implements OnInit {
   private addBandForm: FormGroup;
   private submitted = false;
-  constructor(private bandsService: BandsService) { }
+
+  constructor(private bandsService: BandsService) {
+  }
 
   ngOnInit() {
     const urlReg = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
@@ -26,10 +28,10 @@ export class AddBandComponent implements OnInit {
 
   showError(fieldName: string) {
     const errorString: string[] = [];
-    if (this.submitted && this.addBandForm.controls[fieldName].errors && this.addBandForm.controls[fieldName].errors.required ) {
+    if (this.submitted && this.addBandForm.controls[fieldName].errors && this.addBandForm.controls[fieldName].errors.required) {
       errorString.push('This field is required');
     }
-    if (this.submitted && this.addBandForm.controls[fieldName].errors && this.addBandForm.controls[fieldName].errors.pattern ) {
+    if (this.submitted && this.addBandForm.controls[fieldName].errors && this.addBandForm.controls[fieldName].errors.pattern) {
       errorString.push('Wrong format');
     }
     return errorString.join(', ');
@@ -46,7 +48,7 @@ export class AddBandComponent implements OnInit {
   submit() {
     this.submitted = true;
     if (this.addBandForm.valid) {
-      const newBand: BandBE = {
+      const newBand: BandResponse = {
         id: null,
         BandName: this.addBandForm.controls.name.value,
         BandOrigin: this.addBandForm.controls.origin.value,
@@ -54,7 +56,7 @@ export class AddBandComponent implements OnInit {
         BandWebsite: this.addBandForm.controls.website.value,
         BandDisbandingYear: this.addBandForm.controls.disbandingYear ? this.addBandForm.controls.disbandingYear.value : null,
       };
-      this.bandsService.addBandBE(newBand).subscribe((band: BandBE) => {
+      this.bandsService.addBandBE(newBand).subscribe((band: BandResponse) => {
         console.log(band);
       });
     }

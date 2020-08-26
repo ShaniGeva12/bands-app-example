@@ -1,17 +1,18 @@
-import {Component, OnInit} from '@angular/core';
-import {BandsService} from './band/bands.service';
+import { Component, OnInit } from '@angular/core';
+import { BandsService } from './band/services/bands.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'ni-app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   title = 'bands';
+
   constructor(private bandsService: BandsService) {
   }
+
   ngOnInit() {
-    // this.bandsService.getBandsList();
   }
 
 }

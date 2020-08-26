@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main-template',
+  selector: 'ni-app-main-template',
   templateUrl: './main-template.component.html',
   styleUrls: ['./main-template.component.scss']
 })

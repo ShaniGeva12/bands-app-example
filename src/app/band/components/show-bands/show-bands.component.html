@@ -1,6 +1,6 @@
 <h1>Bands</h1>
 <span *ngIf="!dataSource || dataSource.data.length === 0" class="no-data">
-  <h3><img src="../../../../assets/error.svg" width="24" /> No bands found</h3>
+  <h3><img src="../../../../assets/images/error.svg" width="24" /> No bands found</h3>
   <p>You can <a routerLink="/add-band">add</a> some bands</p>
 </span>
 <table *ngIf="dataSource && dataSource.data.length > 0" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -46,7 +46,7 @@
   <!-- delete Column -->
   <ng-container matColumnDef="delete">
     <th mat-header-cell *matHeaderCellDef> &nbsp; </th>
-    <td mat-cell *matCellDef="let element"> <img class="delete-button" src="../../../../assets/delete-icon.jpg" width="24" height="16" (click)="deleteBand($event, element.id)"> </td>
+    <td mat-cell *matCellDef="let element"> <img class="delete-button" src="../../../../assets/images/delete-icon.jpg" width="24" height="16" (click)="deleteBand($event, element.id)"> </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

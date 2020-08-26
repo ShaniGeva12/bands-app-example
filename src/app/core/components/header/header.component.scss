@@ -17,7 +17,7 @@ header {
     height: 36px;
     right: 16px;
     top: 24px;
-    background-image: url("../../../../assets/hamburger.png");
+    background-image: url("../../../../assets/images/hamburger.png");
     background-size: contain;
     background-repeat: no-repeat;
     display: none;
@@ -64,7 +64,7 @@ and (max-device-width: 480px) {
       top: $header_height;
       height: calc(100% - #{$header_height});
       width: 50%;
-      margin-right: 0px;
+      margin-right: 0;
       li {
         line-height: 32px;
         border-bottom: 1px solid #cacaca;
