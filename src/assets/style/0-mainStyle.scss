@@ -1,0 +1,38 @@
+@import "bits.scss";
+@import "material-style.scss";
+
+//add bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+.pointer{
+    cursor: pointer;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+.black-checkbox{
+    .mat-checkbox-frame{
+        border: 1px solid black;
+    }
+
+    &.mat-checkbox-checked{
+        .mat-checkbox-background{
+            background: transparent;
+
+            .mat-checkbox-checkmark-path{
+                stroke: black !important;
+            }
+        }
+    }
+    
+}
