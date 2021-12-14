@@ -1,0 +1,26 @@
+.header-component{
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+
+    display: flex;
+    justify-content: space-between;
+
+    .logo{
+        height: 45px;
+    }
+
+    .align-center{
+      display: flex;
+      align-items: center;
+    }
+
+    .links{
+      display: flex;
+    }
+
+    .link-container{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+}
