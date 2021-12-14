@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BandsComponent } from './bands/bands.component';
-import { AddBandComponent } from './bands/components/add-band/add-band.component';
-import { BandPageComponent } from './bands/components/band-page/band-page.component';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { BandsComponent } from '../bands/bands.component';
+import { AddBandComponent } from '../bands/components/add-band/add-band.component';
+import { BandPageComponent } from '../bands/components/band-page/band-page.component';
+import { WelcomeComponent } from '../welcome/welcome.component';
 
 
 const routes: Routes = [
