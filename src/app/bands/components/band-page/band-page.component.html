@@ -1,1 +1,32 @@
-<p>band-page works!</p>
+<div class="band-page-component">
+
+
+    <mat-card class="band-card">
+        <mat-card-title>{{ band.name }}</mat-card-title>
+
+        <mat-card-content>
+            <div class="label"> Origin: </div>
+            <div class="val">{{ band.origin }}</div>
+  
+            <div class="label"> Active Years: </div>
+            <div class="val">{{ band.activeYears }}</div>
+  
+            <div class="label"> Website: </div>
+            <div class="val">
+                <a href="{{ band.website }}" target="_blank">
+                    {{ band.website }}
+                </a>
+            </div>
+  
+            <ng-container *ngIf="band?.isDisbanding" >
+              <div class="label"> Disbanding Year: </div>
+              <div class="val">{{ band.disbandingYear }}</div>
+            </ng-container>  
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-raised-button (click)="navigateToBandsPage()" >Go Back</button>
+        </mat-card-actions>
+    </mat-card>
+
+</div>

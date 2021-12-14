@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTable } from '@angular/material';
 import { Router } from '@angular/router';
 import { BandItem } from './model/bands.model';
 import { BandsService } from './services/bands.service';
@@ -9,8 +10,9 @@ import { BandsService } from './services/bands.service';
   styleUrls: ['./bands.component.scss']
 })
 export class BandsComponent implements OnInit {
+  @ViewChild(MatTable, { static: true }) table: MatTable<any>;
 
-  displayedColumns: string[] = ['id', 'name', 'origin', 'activeYears', 'website', 'disbandingYear'];
+  displayedColumns: string[] = ['id', 'name', 'origin', 'activeYears', 'website', 'disbandingYear', 'actions'];
   dataSource: Array<BandItem> = new Array<BandItem>();
 
   constructor(
@@ -28,5 +30,11 @@ export class BandsComponent implements OnInit {
 
   navigateToBandPage(bandId: number){
     this.router.navigate(['/band-details', bandId]);
+  }
+
+  removeBand(bandId: number){
+    this.bandsService.removeBand(bandId);
+    this.dataSource = this.bandsService.bands;
+    this.table.renderRows();
   }
 }

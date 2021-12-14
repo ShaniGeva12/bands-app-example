@@ -1,0 +1,42 @@
+@import "src/assets/style/bits.scss";
+
+.band-page-component{
+    padding: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .band-card{
+        width: 50%;
+        border: 1px solid $black-0-125;
+        border-radius: 0.25rem;
+
+        .mat-card-title{
+            border-bottom: 1px solid $black-0-125;
+            padding-bottom: 5px;
+        }
+
+        .mat-card-content{
+            display: flex;
+            flex-wrap: wrap;
+
+            .label, .val{
+                flex: 0 0 auto;
+                padding-inline: 10px;
+                padding-block: 5px;
+            }
+
+            .label{
+                width: calc(100%/12*2);
+            }
+
+            .val{
+                width: calc(100%/12*10);
+            }
+        }
+    }
+
+
+}

@@ -27,4 +27,19 @@ export class BandsService {
 
     this.bands.push(bandToAdd);
   }
+
+  removeBand(bandId: number){
+    let bandToRemove : BandItem = this.bands.find(elm => elm.id == bandId);
+
+    if(bandToRemove){
+      this.bands.splice(bandId, 1);
+
+      //fixing each bandItem ID to match array
+      this.bands.forEach(item=>{
+        item.id = this.bands.indexOf(item);
+      });
+    }
+
+    
+  }
 }
