@@ -10,6 +10,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AddBandComponent } from './bands/components/add-band/add-band.component';
 import { BandPageComponent } from './bands/components/band-page/band-page.component';
 import { MaterialModule } from './modules/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { MaterialModule } from './modules/material.module';
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

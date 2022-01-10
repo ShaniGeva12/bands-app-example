@@ -1,0 +1,33 @@
+.add-band-component{
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bandForm{
+        width: 50%;
+    }
+
+    .section{
+        display: flex;
+        margin-bottom: 10px;
+
+        .label, .val{
+            flex: 0 0 auto;
+            padding-inline: 10px;
+        }
+
+        .label{
+            width: calc(100%/12*2);
+            padding-bottom: 1.34375em;
+            display: flex;
+            align-items: center;
+        }
+
+        .val{
+            width: calc(100%/12*10);
+        }
+    }
+
+}
