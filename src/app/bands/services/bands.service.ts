@@ -10,9 +10,33 @@ export class BandsService {
   public bands: Array<BandItem> = new Array<BandItem>();
   
   constructor() { 
+    if (localStorage.length > 0) {
+      this.readFromLocalStorage();
+    } 
+    if(this.bands.length == 0) {
+      this.readFromJsonObj();
+    }
+  }
+
+  readFromLocalStorage(){
+    let jsonObj : any;
+    for(let i=0; i<localStorage.length; i++){
+      jsonObj = JSON.parse(localStorage.getItem('BandItem ' + i)); 
+      this.bands.push(<BandItem>jsonObj);
+    }
+  }
+
+  readFromJsonObj(){
     let jsonObj: any = JSON.stringify(DataJson);
     jsonObj = JSON.parse(jsonObj); 
     this.bands = <Array<BandItem>>jsonObj; 
+  }
+
+  saveListToLocalStorage(){
+    localStorage.clear();
+    this.bands.forEach(item=>{
+      localStorage.setItem('BandItem ' + item.id, JSON.stringify(item));
+    });
   }
 
   addBand(band: AddBandRequest){
@@ -22,10 +46,12 @@ export class BandsService {
       origin: band.origin,
       activeYears: band.activeYears,
       website: band.website,
-      isDisbanding: band.isDisbanding
+      isDisbanding: band.isDisbanding,
+      disbandingYear: band.isDisbanding? band.disbandingYear : ''
     };
 
     this.bands.push(bandToAdd);
+    this.saveListToLocalStorage();
   }
 
   removeBand(bandId: number){
@@ -38,8 +64,7 @@ export class BandsService {
       this.bands.forEach(item=>{
         item.id = this.bands.indexOf(item);
       });
+      this.saveListToLocalStorage();
     }
-
-    
   }
 }
