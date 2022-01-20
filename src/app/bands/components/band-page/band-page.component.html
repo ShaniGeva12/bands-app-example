@@ -1,7 +1,7 @@
 <div class="band-page-component">
 
 
-    <mat-card class="band-card">
+    <mat-card class="band-card" *ngIf="band; else loading">
         <mat-card-title>{{ band.name }}</mat-card-title>
 
         <mat-card-content>
@@ -28,5 +28,9 @@
           <button mat-raised-button (click)="navigateToBandsPage()" >Go Back</button>
         </mat-card-actions>
     </mat-card>
+
+    <ng-template #loading >
+        Loading...
+    </ng-template>
 
 </div>

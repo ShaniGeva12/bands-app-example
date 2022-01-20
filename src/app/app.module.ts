@@ -11,6 +11,7 @@ import { AddBandComponent } from './bands/components/add-band/add-band.component
 import { BandPageComponent } from './bands/components/band-page/band-page.component';
 import { MaterialModule } from './modules/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,

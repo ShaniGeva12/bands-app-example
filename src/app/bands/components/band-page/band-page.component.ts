@@ -10,8 +10,8 @@ import { BandsService } from '../../services/bands.service';
 })
 export class BandPageComponent implements OnInit {
 
-  @Input() bandId: number;
-  @Input() band: BandItem ;
+  bandId: number;
+  band: BandItem ;
   
   constructor(
     private bandsService: BandsService,
@@ -21,7 +21,9 @@ export class BandPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.bandId = +(this.route.snapshot.paramMap.get('id'));
-    this.band = this.bandsService.bands[this.bandId];
+    this.bandsService.bands$.subscribe(res=>{
+      this.band = res.find(band => band.id == this.bandId);
+    });
   }
 
   navigateToBandsPage(){

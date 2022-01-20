@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTable } from '@angular/material';
+import { MatSort, MatTable, MatTableDataSource } from '@angular/material';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
+import { SubSink } from 'subsink';
 import { BandItem } from './model/bands.model';
 import { BandsService } from './services/bands.service';
 
@@ -11,9 +13,17 @@ import { BandsService } from './services/bands.service';
 })
 export class BandsComponent implements OnInit {
   @ViewChild(MatTable, { static: true }) table: MatTable<any>;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+
 
   displayedColumns: string[] = ['id', 'name', 'origin', 'activeYears', 'website', 'disbandingYear', 'actions'];
-  dataSource: Array<BandItem> = new Array<BandItem>();
+  dataSource = new MatTableDataSource<BandItem>();
+
+  subs: SubSink = new SubSink();
+  
+  ngOnDestroy(): void {
+      this.subs.unsubscribe();
+  }
 
   constructor(
     private bandsService: BandsService,
@@ -21,7 +31,13 @@ export class BandsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.dataSource = this.bandsService.bands;
+    this.subs.sink = this.bandsService.bands$.subscribe((bands : BandItem[])=>{
+      this.dataSource.data = bands;
+    });
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
   }
 
   rowClicked(row: BandItem){
@@ -34,7 +50,5 @@ export class BandsComponent implements OnInit {
 
   removeBand(bandId: number){
     this.bandsService.removeBand(bandId);
-    this.dataSource = this.bandsService.bands;
-    this.table.renderRows();
   }
 }
