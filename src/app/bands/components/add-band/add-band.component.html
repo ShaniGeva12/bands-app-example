@@ -5,7 +5,7 @@
         <div class="section">
             <div class="label">Name: </div>
             <mat-form-field class="val" appearance="outline">
-                <input matInput placeholder="name" formControlName="name" >
+                <input matInput data-test="band-name" placeholder="name" formControlName="name" >
                 <mat-error *ngIf="bandForm.controls.name.errors">
                     Required Field
                 </mat-error>
@@ -15,7 +15,7 @@
         <div class="section ">
             <div class="label">Origin: </div>
             <mat-form-field class="val" appearance="outline">
-                <input matInput placeholder="origin" formControlName="origin" >
+                <input matInput data-test="band-origin" placeholder="origin" formControlName="origin" >
                 <mat-error *ngIf="bandForm.controls.origin.errors">
                     Required Field
                 </mat-error>
@@ -25,7 +25,7 @@
         <div class="section ">
             <div class="label">Years active: </div>
             <mat-form-field class="val" appearance="outline">
-                <input matInput placeholder="years" formControlName="activeYears" >
+                <input matInput data-test="band-active-years" placeholder="years" formControlName="activeYears" >
                 <mat-error *ngIf="bandForm.controls.activeYears.errors">
                     Required Field
                 </mat-error>
@@ -35,7 +35,7 @@
         <div class="section ">
             <div class="label">Website: </div>
             <mat-form-field class="val" appearance="outline">
-                <input matInput placeholder="website" formControlName="website" >
+                <input matInput data-test="band-website" placeholder="website" formControlName="website" >
                 <mat-error *ngIf="bandForm.controls.website.errors">
                     Required Field
                 </mat-error>
@@ -43,10 +43,12 @@
         </div>
 
         <div class="section ">
-            <mat-checkbox class="label black-checkbox" [color]="primary" formControlName="isDisbanding" >Disbanding Year</mat-checkbox>
+            <mat-checkbox class="label black-checkbox" [color]="primary" data-test="band-isDisbanding" formControlName="isDisbanding" >
+                Disbanding Year
+            </mat-checkbox>
 
             <mat-form-field class="val" appearance="outline" *ngIf="bandForm.controls.isDisbanding.value" >
-                <input matInput placeholder="Enter year" formControlName="disbandingYear" >
+                <input matInput data-test="band-disbandingYear" placeholder="Enter year" formControlName="disbandingYear" >
                 <mat-error *ngIf="bandForm.controls.disbandingYear.errors">
                     Required Field
                 </mat-error>
@@ -54,7 +56,7 @@
         </div>
 
         <div class="footer">
-            <button mat-raised-button color="primary" type="submit" [disabled]="bandForm.invalid" >
+            <button mat-raised-button data-test="band-submit"  color="primary" type="submit" [disabled]="bandForm.invalid" >
                 Submit
             </button>
         </div>
