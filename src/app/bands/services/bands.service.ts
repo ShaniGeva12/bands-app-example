@@ -16,7 +16,7 @@ export class BandsService {
   constructor(private http: HttpClient) { 
     this.refreshBandsList();
   }
-
+ 
   private refreshBandsList(){
     this.getBands().subscribe(res => {
       this._bands$.next(res);
