@@ -39,6 +39,15 @@
       "website": "https://www.disturbed1.com/",
       "isDisbanding": false,
       "disbandingYear": null
+    },
+    {
+      "name": "Shani",
+      "origin": "Israel",
+      "activeYears": "1",
+      "website": "www.shani.com",
+      "isDisbanding": null,
+      "disbandingYear": null,
+      "id": 4
     }
   ]
 }
