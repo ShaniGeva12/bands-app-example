@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort, MatTable, MatTableDataSource } from '@angular/material';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
 import { SubSink } from 'subsink';
 import { BandItem } from './model/bands.model';
 import { BandsService } from './services/bands.service';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-bands',
@@ -20,7 +21,7 @@ export class BandsComponent implements OnInit {
   dataSource = new MatTableDataSource<BandItem>();
 
   subs: SubSink = new SubSink();
-  
+
   ngOnDestroy(): void {
       this.subs.unsubscribe();
   }
