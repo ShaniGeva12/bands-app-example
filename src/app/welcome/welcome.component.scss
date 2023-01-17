@@ -1,13 +1,23 @@
 // @import "src/assets/style/bits.scss";
 
 .welcome-component{
-    height: 100%;
-    padding: 20px;
+    height: 70vh;
+    padding: 0px 20px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     font-size: 24px;
     font-weight: bold;
+
+    .img-container {
+      margin-top: 20px;
+    }
+
+    .instruments{
+        height: 90px;
+    }
+
 }
