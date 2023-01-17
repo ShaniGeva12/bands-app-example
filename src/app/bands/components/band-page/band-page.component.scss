@@ -2,23 +2,29 @@
 
 .band-page-component{
     padding: 20px;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
 
 
-    .band-card{
+    .band-card {
         width: 50%;
         border: 1px solid $black-0-125;
         border-radius: 0.25rem;
 
-        .mat-card-title{
+        mat-card {
+          &-header {
             border-bottom: 1px solid $black-0-125;
             padding-bottom: 5px;
-        }
+          }
 
-        .mat-card-content{
+          &-title {
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          &-content {
             display: flex;
             flex-wrap: wrap;
 
@@ -35,7 +41,9 @@
             .val{
                 width: calc(100%/12*10);
             }
+          }
         }
+
     }
 
 
