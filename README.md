@@ -2,8 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
-## Development server
+
+## Development DB
 Run `json-server --watch db.json` to activate local demo db. 
+
+
+## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:5001/`. 
 The app will automatically reload if you change any of the source files.
 
@@ -21,7 +25,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npx cypress open` to execute the end-to-end tests Cypress [Cypress](https://www.cypress.io/).
 
 ## Further help
 
