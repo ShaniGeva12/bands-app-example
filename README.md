@@ -8,7 +8,7 @@ Run `json-server --watch db.json` to activate local demo db.
 
 
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:5001/`. 
+Run `ng serve --port 5001` for a dev server. Navigate to `http://localhost:5001/`. 
 The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
