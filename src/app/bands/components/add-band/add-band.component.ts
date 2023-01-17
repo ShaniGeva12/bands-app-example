@@ -1,9 +1,9 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormControl, AbstractControl, FormBuilder } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SubSink } from 'subsink';
 import { AddBandRequest } from '../../model/bands.model';
 import { BandsService } from '../../services/bands.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-band',
@@ -15,11 +15,11 @@ export class AddBandComponent implements OnInit {
   bandForm: FormGroup;
 
   subs: SubSink = new SubSink();
-  
+
   ngOnDestroy(): void {
       this.subs.unsubscribe();
   }
-  
+
   constructor(
     private bandsService: BandsService,
     private router: Router,
